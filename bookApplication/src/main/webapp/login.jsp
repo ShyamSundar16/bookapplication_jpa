@@ -5,14 +5,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Login</title>
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 <style type="text/css">
-body {
-	content: "";
-	height: 100%;
-	background-color: black;
-}
 
+div::after {
+  content: "";
+  background: url("/assets/images/i3.jpg" );
+  background-repeat:no-repeat;
+  background-size : 1400px 750px;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-top:30px;
+  position: absolute;
+  z-index: -2;   
+}
 .center {
 	margin: 100px auto;
 	height: 80%;
@@ -40,13 +54,14 @@ input[type=text], select {
 }
 
 input[type=password], select {
-	width: 40%;
+width: 40%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 20px;
 	box-sizing: border-box;
+	
 }
 
 .button1 {
@@ -101,10 +116,10 @@ h4 {
 	margin-right: auto;
 	height: 100%;
 	width: 100%;
-	background-color: #E1CBF1;
+	background-color:#F5EEF8  ;
 	text-align: left;
 	padding: 8px;
-	background-color: #E1CBF1;
+	
 	margin: 100px auto;
 	height: 80%;
 	width: 40%
@@ -120,13 +135,6 @@ div::after {
 	z-index: -2;
 }
 
-input[type="text"] {
-	font-size: 20px;
-}
-
-input[type="password"] {
-	font-size: 20px;
-}
 
 body1 {
 	background-color: black;
@@ -143,9 +151,49 @@ h2 {
 p {
 	color: red;
 }
+
+#websiteTitle{
+  font-size: 2.4em;
+  vertical-align: middle;
+  font-family: 'Harrington', bold;
+  padding-left: 15px;
+  padding-right:15px;
+  color: white;
+}
 </style>
+<script type="text/javascript">
+$(document).ready(function(){
+    $("input").focus(function(){
+        $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#ffffff");
+    });
+});
+
+</script>
 </head>
 <body>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+				<span id="websiteTitle">Book Application  </span>
+		</div>
+		<ul class="nav navbar-nav">
+			<li  ><a href="/">Home</a></li>
+			<li><a href="/userview">View Books</a></li>
+			<li><a href="#">Contact us</a>
+		
+		</ul>
+		
+		<ul class="nav navbar-nav navbar-right">
+			<li><a href="../register.jsp"><span class="glyphicon glyphicon-user"></span>
+					Sign Up</a></li>
+			
+		</ul>
+	</div>
+	</nav>
 
 	<div class="center_div">
 		<h1>
@@ -159,17 +207,17 @@ p {
 
 					<div align="center">
 
-						<div class="error" id="error1"></div>
-						<input type="text" placeholder="Email" name="email"><br>
+						
+						<input type="text" placeholder="Email" name="email" class="form-control">
 						<br> <br>
 
-						<div class="error" id="error2"></div>
-						<input type="password" placeholder="Password" name="password"></b><br>
+						
+						<input type="password" placeholder="Password" name="password" class="form-control"></b><br>
 						<br>
 
 						<button onclick="return validate()" class="button1">LOGIN</button>
 						</form>
-						<span class="body2"><a href="register.jsp" >SIGN UP</a></span>
+					
 
 					</div>
 

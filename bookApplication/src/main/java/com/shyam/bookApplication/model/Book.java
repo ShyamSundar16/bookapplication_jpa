@@ -16,7 +16,7 @@ public class Book {
 	@Id
 	@Column(name = "id")
 	@GeneratedValue
-	private int id;
+	private Long id;
 
 	@Column(name = "name")
 	private String name;
@@ -27,11 +27,11 @@ public class Book {
 	@Column(name = "released_date")
 	private Date releaseDate;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
