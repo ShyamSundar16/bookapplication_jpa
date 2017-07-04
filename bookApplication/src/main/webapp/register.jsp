@@ -20,6 +20,14 @@
   padding-right:15px;
   color: white;
 }
+#websiteTitle1{
+  font-size: 2.4em;
+  vertical-align: middle;
+  font-family: 'Harrington', bold;
+  padding-left: 15px;
+  padding-right:15px;
+  color:black;
+}
 
 div::after {
   content: "";
@@ -83,6 +91,7 @@ input[type=email], select {
 .button1 {
 	background-color: #4CAF50;
 	color: white;
+	border-radius: 20px;
 	border: 2px solid;
 	padding: 15px 32px;
 }
@@ -205,7 +214,7 @@ $(document).ready(function(){
 
 	<div class="center_div">
 		<h1>
-			<center>Book Application</center>
+			<center><span id="websiteTitle1">Register  </span></center>
 		</h1>
 		<p></p>
 		<c:forEach items="${errors}" var="error">
@@ -218,7 +227,7 @@ $(document).ready(function(){
 		<center>
 			<table align="center">
 
-				<form action="/users/save" method="post">
+				<form action="../users/save" method="post">
 
 					<div align="center">
 						<div class="error" id="error2"></div>

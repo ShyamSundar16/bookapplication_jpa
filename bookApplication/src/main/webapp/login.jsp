@@ -18,7 +18,7 @@ div::after {
   background: url("/assets/images/i3.jpg" );
   background-repeat:no-repeat;
   background-size : 1400px 750px;
-  opacity: 0.2;
+  opacity: 1.0;
   top: 0;
   left: 0;
   bottom: 0;
@@ -44,29 +44,33 @@ div::after {
 }
 
 input[type=text], select {
-	width: 40%;
+	height:0%;
+	width: 50%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 20px;
 	box-sizing: border-box;
+	font-size: 1.2em;
 }
 
 input[type=password], select {
-width: 40%;
+height:30%;
+width: 50%;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
 	border: 1px solid #ccc;
 	border-radius: 20px;
 	box-sizing: border-box;
-	
+	font-size: 1.2em;
 }
 
 .button1 {
 	background-color: #4CAF50;
 	color: white;
+	border-radius: 20px;
 	border: 2px solid;
 	padding: 15px 32px;
 }
@@ -111,12 +115,12 @@ h4 {
 }
 
 .center_div {
-	border: 5px solid gray;
+	
 	margin-left: auto;
 	margin-right: auto;
 	height: 100%;
 	width: 100%;
-	background-color:#F5EEF8  ;
+	
 	text-align: left;
 	padding: 8px;
 	
@@ -196,10 +200,6 @@ $(document).ready(function(){
 	</nav>
 
 	<div class="center_div">
-		<h1>
-			<center>Book Application</center>
-		</h1>
-		<p></p>
 		<center>
 			<table align="center">
 

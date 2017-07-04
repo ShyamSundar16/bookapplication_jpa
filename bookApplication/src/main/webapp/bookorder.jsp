@@ -18,14 +18,14 @@
 
 <style>
 .center {
-	border: 5px solid grey;
+	background-color: #00bcd4;
 	margin-left: auto;
 	margin-right: auto;
 	position: center;
 	z-index: 30;
 	max-width: 900px;
 	margin: 100px auto;
-	background-color: #DCDCDC;
+
 }
 #websiteTitle{
   font-size: 2.4em;
@@ -41,7 +41,7 @@ div::after {
   background: url("/assets/images/i3.jpg" );
   background-repeat:no-repeat;
   background-size : 1400px 750px;
-  opacity: 0.2;
+  opacity: 0.4;
   top: 0;
   left: 0;
   bottom: 0;
@@ -89,7 +89,7 @@ th {
 		<ul class="nav navbar-nav">
 			<li><a href="/login.jsp">Home</a></li>
 			<li><a href="/books">View Books</a></li>
-			<li><a href="#">Contact us</a></li>
+			<li><a href="../../order/myorders">My Cart</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 
@@ -99,11 +99,10 @@ th {
 	</div>
 	</nav>
 	
-		<h3><center><b>${USER.name}</b></center></h3>
+		<h3 align="center"><b>${USER.name}</b></h3>
 <div class="center">	
-	<center><b>Item Details</b></center>
-
-
+	<b>Item Details :</b>
+	<br></br>
 	<form action="../../orderItems/addToCart" method="post" >
 
 		<input type="hidden" name="book_id" value="${books.id}" />
@@ -132,3 +131,4 @@ th {
 	</form></div>
 </body>
 </html>
+

@@ -14,7 +14,7 @@
 	z-index: 30;
 	max-width: 500px;
 	margin: 100px auto;
-	background-color: #DCDCDC;
+    background-color: #00bcd4;
 }
 
 table {
@@ -92,6 +92,7 @@ div::after {
 		<table class="table">
 			<thead>
 				<tr>
+				<th></th>
 					<th>ID</th>
 					<th>Name</th>
 					<th>Price</th>
@@ -102,18 +103,20 @@ div::after {
 			<tbody>
 
 
-				<c:forEach items="${books}" var="book">
-					<tr>
-						<td>${book.id}</td>
-						<td>${book.name}</td>
-						<td>${book.price}</td>
-						<td>${book.releaseDate}</td>
+					<c:forEach items="${books}" var="book">
+						<tr>
+							<td><img class="card-img-left"
+								src="../assets/images/bkdisp.png" width="100"
+								alt="Card image cap"></td>
+							<td>${book.id}</td>
+							<td>${book.name}</td>
+							<td>${book.price}</td>
+							<td>${book.releaseDate}</td>
 						
 
-					</tr>
+						</tr>
 
-				</c:forEach>
-
+					</c:forEach>
 
 
 			</tbody>

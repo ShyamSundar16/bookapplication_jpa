@@ -6,14 +6,14 @@
 <head>
 <style>
 .center {
-	border: 5px solid grey;
+
 	margin-left: auto;
 	margin-right: auto;
 	position: center;
 	z-index: 30;
-	max-width: 500px;
+	max-width: 700px;
 	margin: 100px auto;
-	background-color: white;
+	background-color: #00bcd4;
 }
 
 table {
@@ -35,7 +35,7 @@ div::after {
 	background: url("/assets/images/i3.jpg" );
 	background-repeat: no-repeat;
 	background-size: 1400px 750px;
-	opacity: 0.2;
+	opacity: 0.4;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -128,7 +128,7 @@ th {
 		<ul class="nav navbar-nav">
 			<li><a href="../Home.jsp">Home</a></li>
 			<li class="active"><a href="#">View Books</a></li>
-			<li><a href="#">Contact us</a></li>
+			<li><a href="../order/myorders">My Cart</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 
@@ -202,7 +202,7 @@ function closeNav() {
 							<td>${book.name}</td>
 							<td>${book.price}</td>
 							<td>${book.releaseDate}</td>
-							<td><a href="/books/view/${book.id}">View</a></td>
+							<td><a href="/books/view/${book.id}" class="btn btn-success btn-sm">View</a></td>
 
 						</tr>
 

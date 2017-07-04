@@ -13,7 +13,7 @@
 	z-index: 30;
 	max-width: 500px;
 	margin: 100px auto;
-	background-color: white;
+	background-color: #00bcd4;
 }
 
 table {
@@ -28,16 +28,13 @@ table {
   padding-right:15px;
   color: white;
 }
-a{
-
-}
 
 div::after {
   content: "";
   background: url("/assets/images/i3.jpg" );
   background-repeat:no-repeat;
   background-size : 1400px 750px;
-  opacity: 0.2;
+  opacity: 0.4;
   top: 0;
   left: 0;
   bottom: 0;
@@ -98,7 +95,7 @@ th {
 		</center>
 	</h3>
 	
-	<center><h3><b><p><font color="green">Order Placed Successfully !</font></p></b></h3></center>
+
 	
 	
 	
@@ -109,7 +106,7 @@ th {
 				<div class="col-md-12">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<strong><i class="fa fa-list"></i> My Orders</strong>
+							<strong><i class="fa fa-list"></i> My Cart</strong>
 						</div>
 						<div class="panel-body">
 							<table id="ordersTbl" border="1"
@@ -137,7 +134,11 @@ th {
 											<td>Rs. ${order.totalPrice }</td>
 											<td>${order.status}</td>
 											<td>${order.orderedDate }</td>
-											
+											<c:if test="${order.status == 'ORDERED'}">
+												<td><a
+													href="../order/updateStatus?id=${order.id}&status=CANCELLED"
+													class="btn btn-danger btn-sm">Cancel Order </a></td>
+											</c:if>
 
 										</tr>
 
